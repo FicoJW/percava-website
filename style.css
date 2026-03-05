@@ -1,0 +1,672 @@
+/* =========================
+PERCAVA DARK THEME
+========================= */
+
+:root {
+  --dark-green: #0f2e1d;
+  --deep-green: #163a24;
+  --cream: #f1ede3;
+  --gold: #c2a878;
+  --muted-green: #6f7d5c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+  background-color: var(--dark-green);
+  color: var(--cream);
+  line-height: 1.6;
+}
+
+/* =========================
+NAVIGATION
+========================= */
+
+header {
+  background-color: var(--deep-green);
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav a {
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+/* =========================
+SECTIONS
+========================= */
+
+section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--gold);
+}
+
+p {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
+
+ul,
+ol {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* =========================
+BUTTON STYLE
+========================= */
+
+button,
+.btn {
+  background-color: var(--gold);
+  color: var(--dark-green);
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+button:hover,
+.btn:hover {
+  background-color: var(--cream);
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+  background-color: var(--deep-green);
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  section {
+    padding: 60px 5%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+FADE IN ANIMATION
+========================= */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+CARD GRID
+========================= */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: var(--deep-green);
+  padding: 30px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background-color: var(--gold);
+  color: var(--dark-green);
+}
+
+.card:hover h3 {
+  margin-bottom: 10px;
+  color: var(--dark-green);
+}
+
+/* =========================
+HERO SECTION
+========================= */
+
+.hero {
+  position: relative;
+  min-height: 80vh;
+  background-image: url("assets/kain-perca-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* overlay biar teks kebaca */
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 30, 18, 0.75);
+}
+
+/* content */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: var(--gold);
+  color: var(--dark-green);
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.scroll-indicator {
+  position: center;
+  bottom: 30px;
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* =========================
+GRID SYSTEM
+========================= */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media (max-width: 900px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: var(--gold);
+}
+
+.accordion-btn {
+  width: 100%;
+  background: var(--deep-green);
+  color: var(--cream);
+  border: none;
+  padding: 15px;
+  text-align: left;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background: #122f20;
+}
+
+/* =========================
+PRODUCT GRID
+========================= */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.product-card {
+  background-color: var(--deep-green);
+  padding: 30px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  background-color: var(--gold);
+  color: var(--dark-green);
+}
+
+.product-card h3 {
+  margin-bottom: 10px;
+  color: var(--gold);
+}
+
+.product-card:hover h3 {
+  margin-bottom: 10px;
+  color: var(--dark-green);
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+/* LOGO */
+
+.logo {
+  position: absolute;
+  left: 60px;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+}
+
+/* NAV LINKS */
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: 600;
+
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px 10%;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+}
+
+/* PRODUCT SHOWCASE */
+
+.product-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.product-item {
+  text-align: center;
+}
+
+.product-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* PRODUCT SHOWCASE */
+
+.product-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.product-item {
+  text-align: center;
+}
+
+.product-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* SCAMPER GRID */
+
+.scamper-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.scamper-card {
+  background: var(--deep-green);
+  padding: 30px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.scamper-card:hover {
+  transform: translateY(-6px);
+  background: var(--gold);
+  color: var(--dark-green);
+}
+
+.scamper-card h3 {
+  margin-bottom: 10px;
+  color: var(--gold);
+}
+
+.scamper-card:hover h3 {
+  margin-bottom: 10px;
+  color: var(--dark-green);
+}
+
+.connect-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.connect-card {
+  background: var(--deep-green);
+  padding: 30px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: var(--cream);
+  transition: 0.3s;
+}
+
+.connect-card:hover {
+  transform: translateY(-6px);
+  background: var(--gold);
+  color: var(--dark-green);
+}
+
+.connect-card h3 {
+  margin-bottom: 10px;
+  color: var(--gold);
+}
+
+.connect-card:hover h3 {
+  margin-bottom: 10px;
+  color: var(--dark-green);
+}
+
+.connect-desc {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.about-more {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.linktree-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 30px;
+  background: var(--gold);
+  color: var(--dark-green);
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.linktree-btn:hover {
+  transform: scale(1.05);
+}
+
+.about-more {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.linktree-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 30px;
+  background: var(--gold);
+  color: var(--dark-green);
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.linktree-btn:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .connect-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+MOBILE FIX (IMPORTANT)
+========================= */
+
+@media (max-width: 900px) {
+  /* SECTION SPACING */
+
+  section {
+    padding: 60px 20px;
+  }
+
+  /* HERO TEXT */
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* IMAGE FIX */
+
+  img {
+    width: 100%;
+  }
+
+  /* GRID FIX */
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* PRODUCT SHOWCASE */
+
+  .product-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  /* SCAMPER GRID */
+
+  .scamper-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* PRODUCT CARD */
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONNECT GRID */
+
+  .connect-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* NAVBAR FIX */
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  /* LOGO POSITION FIX */
+
+  .logo {
+    position: static;
+  }
+
+  /* LOGO SIZE */
+
+  .logo img {
+    height: 50px;
+  }
+
+  /* NAV LINKS */
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+}
