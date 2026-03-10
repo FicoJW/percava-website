@@ -679,3 +679,37 @@ MOBILE FIX (IMPORTANT)
   color: var(--gold);
   transform: translateX(5px);
 }
+
+/* SDG SECTION */
+
+.sdg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.sdg-card {
+  background: var(--deep-green);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.sdg-card img {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.sdg-card:hover {
+  transform: translateY(-8px);
+  background: var(--gold);
+  color: var(--dark-green);
+}
+
+@media (max-width: 900px) {
+  .sdg-grid {
+    grid-template-columns: 1fr;
+  }
+}
