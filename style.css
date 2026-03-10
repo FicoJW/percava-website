@@ -10,6 +10,10 @@ PERCAVA DARK THEME
   --muted-green: #6f7d5c;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
