@@ -670,3 +670,12 @@ MOBILE FIX (IMPORTANT)
     font-size: 1.1rem;
   }
 }
+
+.counter {
+  margin-right: 3px;
+}
+
+.accordion-btn:hover {
+  color: var(--gold);
+  transform: translateX(5px);
+}
