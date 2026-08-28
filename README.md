@@ -37,8 +37,8 @@ percava-website/
 ├── profil.html
 ├── script.js
 ├── style.css
-├── package.json
-└── package-lock.json
+└── .gitignore
+```
 
 ## Purpose
 This project was developed as a web development project to practice frontend development, responsive design, website structure, and user interface implementation.

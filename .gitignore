@@ -1,0 +1,5 @@
+# Dependencies installed locally by npm.
+node_modules/
+
+# npm diagnostic logs.
+npm-debug.log*
